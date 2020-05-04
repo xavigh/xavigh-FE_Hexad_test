@@ -11,10 +11,27 @@ import * as action from './counter.actions';
   styleUrls: ['./rating.component.css']
 })
 export class RatingComponent implements OnInit {
+ 
+  count$: Observable<number>;
 
-  constructor() { }
+  constructor(private store: Store<{count: number}> ) { }
 
   ngOnInit() {
+
+    this.count$ = this.store.pipe(select('count'));
+  }
+
+  increment() {
+    this.store.dispatch(action.increment());
+  }
+  decrement() {
+    this.store.dispatch(action.decrement());
+  }
+  random() {
+    this.store.dispatch(action.random());
+  }
+  jumpTo(varnum: number ) {
+    this.store.dispatch(action.jumpTo({num: varnum}));
   }
 
 }

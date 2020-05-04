@@ -9,8 +9,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { StoreModule } from '@ngrx/store';
 import { counterReducer} from './counter.reducer';
 
-import { RatingComponent } from './components/rating/rating.component';
 
+import { RatingComponent } from './components/rating/rating.component';
 
 
 

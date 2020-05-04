@@ -1,5 +1,5 @@
 import { createReducer, on } from '@ngrx/store';
-import * as  states  from './counter.actions';
+import * as  states  from './components/rating/counter.actions';
  
 export const initialState = 0;
  
