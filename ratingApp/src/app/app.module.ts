@@ -19,13 +19,16 @@ import { RatingComponent } from './components/rating/rating.component';
     AppComponent,
     BooksComponent,
     NavbarComponent,
-    RatingComponent,
+    RatingComponent
+    
+    
     
     
   
   ],
   imports: [
-    BrowserModule,
+   StoreModule,   
+   BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({ count: counterReducer})
    
