@@ -13,15 +13,16 @@ import * as action from "./counter.actions";
 export class RatingComponent implements OnInit {
  
     count$: Observable<number>;
+    listItems$: Observable<any[]>;
   
-    constructor(private store: Store<{count: number}> ) { }
+    constructor(private store: Store<{count: number}> ) {   }
   
     
     ngOnInit() {
   
       this.count$ = this.store.pipe(select('count'));
-    }
-  
+      
+    }  
             increment() {
               this.store.dispatch(action.increment());
             }

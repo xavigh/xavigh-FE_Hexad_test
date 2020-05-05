@@ -8,8 +8,10 @@ const _counterReducer = createReducer(initialState,
   on(states.decrement, state => state - 1),
   on(states.random, state => Math.floor(Math.random() * 100 )),
   on(states.jumpTo, (state, { num }) => num )
+  
 );
  
 export function counterReducer(state, action) {
   return _counterReducer(state, action);
 }
+
