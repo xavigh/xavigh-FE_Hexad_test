@@ -7,8 +7,9 @@ import { RatingComponent } from './components/rating/rating.component';
 
 export const ROUTES: Routes = [
   
-  { path: "books/:id", component: BooksComponent },
+  { path: "books", component: BooksComponent },
   { path: "rating", component: RatingComponent },
+  
 
   { path: "", pathMatch: "full", redirectTo: "home" },
   { path: "**", pathMatch: "full", redirectTo: "home" }

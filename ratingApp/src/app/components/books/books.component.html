@@ -1,1 +1,15 @@
-<p>books works!</p>
+{{books.authors }}
+
+<div class="card-columns m-5">
+
+    <div *ngFor="let book of books" class=" card pointer ">
+        <img class="card-img-top img-thumbnail img-circle " [src]="book.thumbnailUrl " alt=" ">
+        <div class="card-body ">
+            <h5 class="card-title ">{{book.title}}</h5>
+            <p class="card-text ">
+                <span class="badge badge-pill badge-primary ">{{ book.categories }}</span>
+            </p>
+        </div>
+    </div>
+
+</div>
