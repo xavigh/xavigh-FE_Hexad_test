@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import  *  as  data  from  'src/assets/json/books.json';
 
+
 @Component({
   selector: 'app-books',
   templateUrl: './books.component.html',

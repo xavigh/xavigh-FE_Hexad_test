@@ -1,18 +1,32 @@
-<div class="card-columns m-5">
+<div class="card-text card-columns mt-5">
 
-    <div *ngFor="let book of books" class=" card pointer ">
+    <div *ngFor="let book of books , index as i" class=" card pointer ">
         <img class="card-img-top img-thumbnail img-circle " [src]="book.thumbnailUrl " alt=" ">
         <div class="card-body ">
             <h5 class="card-title ">{{book.title}}</h5>
             <p class="card-text ">
                 <span class="badge badge-pill badge-primary ">{{ book.categories }}</span>
             </p>
-            <div>
-                <app-rating></app-rating>
 
-            </div>
+            <!-- <bar-rating [rate]="rate+i" value=[rate] [max]="10"></bar-rating> -->
+            <p class="card-text ">
+
+                <bar-rating [(rate)]="rate+i" [max]="4" [theme]="'horizontal'" [showText]="true" [titles]="['1', '2' , '3', '4']"></bar-rating>
+
+
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+    <div class="row">
+
+        <div class="col">
+
+
 
         </div>
     </div>
-
-</div>

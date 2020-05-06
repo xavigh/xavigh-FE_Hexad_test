@@ -7,8 +7,8 @@ import { BooksComponent } from './components/books/books.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { RatingComponent } from './components/rating/rating.component';
 
-//Json
-
+//ngx-rating
+import { BarRatingModule } from "ngx-bar-rating";
 
 //ngrx 
 import { StoreModule } from '@ngrx/store';
@@ -36,6 +36,7 @@ import { ROUTES } from "./app.routes";
   imports: [
    StoreModule,   
    BrowserModule,
+   BarRatingModule,
  
    RouterModule.forRoot(ROUTES , {useHash: true }),
    StoreModule.forRoot({ count: counterReducer})
