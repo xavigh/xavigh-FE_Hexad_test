@@ -15,8 +15,10 @@ export const jumpTo = createAction('JumpTo',
 
 // Action to get json data
 export const getJsonData = createAction('GetJsonData',
+    
 
-    props<{ data: any[] }>()
+
+    props<{ jsonData: any[] }>()
 );
 
 

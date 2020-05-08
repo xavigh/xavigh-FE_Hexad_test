@@ -1,8 +1,11 @@
 import { createReducer, on } from '@ngrx/store';
 import * as  states  from '../app/counter.actions';
 import  *  as  data  from  'src/assets/json/books.json';
+
  
 export const initialState = 0;
+export const jsonData = data['default'];
+// console.log(jsonData);// this is working , we are getting json dta 
  
 const _counterReducer = createReducer(initialState,
   on(states.increment, state => state + 1),
@@ -19,9 +22,11 @@ export function counterReducer(state, action) {
 
 // Get Json data
 const _jsonReducer = createReducer(initialState,
-  on( states.getJsonData, ( state =>  state + data['default'] ))
+  on( states.getJsonData, state =>  jsonData ) 
+  // on(states.getJsonData, (data, { jsonData }) => data)
+ 
 );
-
+ 
 export function jsonReducer(state, action) {
   return _jsonReducer(state, action);
 }

@@ -72,3 +72,13 @@ hr {
 .fadeIn {
     animation-name: fadeIn;
 }
+
+
+/* bar rating  */
+
+.br-horizontal .br-text {
+    width: 74px;
+    margin-left: 20px;
+    font-size: 18px;
+    color: #EDB867;
+}

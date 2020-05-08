@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as action from "./../../counter.actions";
+import { jsonData } from 'src/app/counter.reducer';
+
+import {Router} from "@angular/router"
 
 
 
@@ -13,14 +16,15 @@ import * as action from "./../../counter.actions";
 export class RatingComponent implements OnInit {
  
     count$: Observable<number>;
-    listItems$: Observable<any[]>;
+    data$: Observable<any[]>;
   
-    constructor(private store: Store<{count: number}> ) {   }
+    constructor(private store: Store<{count: number}>, private store2: Store<{ data: any[]}> , private router: Router) {   }
   
     
     ngOnInit() {
-  
       this.count$ = this.store.pipe(select('count'));
+      this.data$ = this.store2.pipe(select('data'));
+      
       
     }  
             increment() {
@@ -34,6 +38,13 @@ export class RatingComponent implements OnInit {
             }
             jumpTo(varnum: number ) {
               this.store.dispatch(action.jumpTo({num: varnum}));
+            }
+
+            //Get json data
+            getJsonData(data: any[] ) {
+              this.store2.dispatch(action.getJsonData({ jsonData: data}));
+              console.log(jsonData);
+              
             }
 
 }
