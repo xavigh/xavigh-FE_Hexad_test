@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store, select } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as action from "./counter.actions";
+import * as action from "./../../counter.actions";
 
 
 

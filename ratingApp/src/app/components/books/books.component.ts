@@ -9,14 +9,12 @@ import  *  as  data  from  'src/assets/json/books.json';
 })
 export class BooksComponent {
 
-books: any = {};
+  books: any = {};
 
   constructor( ) { 
   
    console.log(data['default']);
     this.books = data['default'];
    
- 
-
-}
+  }
 }

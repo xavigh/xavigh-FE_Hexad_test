@@ -13,6 +13,7 @@ import { BarRatingModule } from "ngx-bar-rating";
 //ngrx 
 import { StoreModule } from '@ngrx/store';
 import { counterReducer} from './counter.reducer';
+import { jsonReducer} from './counter.reducer';
 
 
 
@@ -39,7 +40,7 @@ import { ROUTES } from "./app.routes";
    BarRatingModule,
  
    RouterModule.forRoot(ROUTES , {useHash: true }),
-   StoreModule.forRoot({ count: counterReducer})
+   StoreModule.forRoot({ count: counterReducer, data: jsonReducer})
    
      
     
